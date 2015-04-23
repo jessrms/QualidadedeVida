@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#009fe5"
+        android:orientation="horizontal"
+        android:padding="7dp" >
+		
+           <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Situação do Usuário"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+	</LinearLayout>
+    
+	<ScrollView 
+   		android:id="@+id/scrollimc"
+        android:layout_width="match_parent"
+        android:layout_height="593dp"
+   		 android:background="@drawable/android"
+         >
+<LinearLayout 
+    android:layout_width="300dp"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:layout_marginTop="60dp">
+    
+    <TextView
+                android:id="@+id/ttimc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="25sp"
+                android:textStyle="bold"
+               
+                android:text="@string/ttimc" 
+                android:textColor="#000000"/>
+    <LinearLayout 
+    	android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="vertical"
+    	android:background="#80ffffff">
+    	 <TextView
+              
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="IMC"
+                android:textSize="20sp"
+                android:textStyle = "bold" 
+                android:textColor="#000000"/>
+            <TextView
+                android:id="@+id/tvresult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="#000000"/>
+            <View
+			     android:layout_height="3dp"
+			     android:layout_width="fill_parent"  
+			     android:background="#000000"  />
+            <View
+			     android:layout_height="3dp"
+			     android:layout_width="fill_parent"  
+			     android:background="#000000"  />
+
+			
+            <TextView
+              
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Situação:"
+                android:textSize="20sp"
+                android:textStyle = "bold" 
+                android:textColor="#000000"/>
+            <TextView
+                android:id="@+id/tvinforma"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:textSize="18sp"
+                android:textColor="#000000" />
+			
+            <TextView   
+			    android:layout_width="fill_parent"  
+			    android:layout_height="wrap_content"  
+			    android:layout_marginTop="10dp"
+			    android:text="Implicações e Riscos à saúde:"
+			    android:textStyle = "bold"
+			    android:textSize="20sp" 
+			    android:textColor="#000000"/> 
+            <TextView
+                android:id="@+id/tvrisc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp" 
+                android:textSize="18sp"
+                android:textColor="#000000"/>
+
+            <View
+			     android:layout_height="3dp"
+			     android:layout_width="fill_parent"  
+			     android:background="#000000"  />
+                  
+
+        </LinearLayout>
+
+    <Button
+        android:id="@+id/btir"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Sair"
+        android:layout_marginTop="10dp"
+        android:background="#94d696"
+        android:textColor="@drawable/button_cor"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ie"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/cozinha"
+        android:layout_marginTop="30dp"/>
+
+</LinearLayout>
+            	</ScrollView>
+
+</LinearLayout>

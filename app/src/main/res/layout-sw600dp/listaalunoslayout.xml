@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ListaAlunosActivity"
+    android:background="@drawable/android">
+    <TextView
+        android:id="@+id/tvInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="28sp"
+        android:layout_marginTop="250dp"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:layout_gravity="center" />
+<ScrollView
+
+        android:id="@+id/scrollmain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+    android:fillViewport="false">
+
+<LinearLayout 
+    
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ListaAlunosActivity"
+     >
+
+
+    <TextView
+        android:id="@+id/tvInf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="28sp"
+        android:text="Pressione o Botao Novo Cadastro!"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center" />
+
+    <LinearLayout
+ 		    android:layout_width="500dp"
+ 		    android:layout_height="wrap_content"
+ 		    android:layout_gravity="center"
+ 		    android:orientation="vertical"
+ 		     >
+ 
+    <Button
+        android:id="@+id/btLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Novo Cadastro"
+        android:background="#94d696"
+        android:textColor="@drawable/button_cor"
+        android:padding="10dp"
+        android:layout_marginTop="35dp"
+        android:layout_gravity="center"
+        android:onClick="linkedInLogin"
+        android:textSize="15dp" />
+    
+	<TextView
+        android:id="@+id/tvlista"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="28sp"
+        android:text="Pressione no seu Cadastro para Visualizar ou Alterar!"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center" />
+    
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </ListView>
+            <Button
+                android:id="@+id/btImc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Resultado IMC"
+                android:background="#94d696"
+                android:textColor="@drawable/button_cor"
+                android:padding="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:textSize="15dp"  />
+
+            <Button
+        android:id="@+id/btDicas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dicas SESI"
+        android:background="#94d696"
+        android:textColor="@drawable/button_cor"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:textSize="15dp"  />
+    <Button
+        android:id="@+id/btQuest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Questionario SESI"
+        android:background="#94d696"
+        android:textColor="@drawable/button_cor"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:textSize="15dp"  />
+
+        <Button
+            android:id="@+id/btServ"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sincronizar Web"
+            android:background="#94d696"
+            android:textColor="@drawable/button_cor"
+            android:padding="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:textSize="15dp" />
+
+        <Button
+                android:id="@+id/btLogout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Logout"
+                android:background="#94d696"
+                android:textColor="@drawable/button_cor"
+                android:padding="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:textSize="15dp" />
+        <TextView
+            android:id="@+id/tverro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="28sp"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center"
+            android:visibility="invisible"/>
+
+    </LinearLayout>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ic"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/cozinha" />
+
+</LinearLayout>
+</ScrollView>
+</LinearLayout>

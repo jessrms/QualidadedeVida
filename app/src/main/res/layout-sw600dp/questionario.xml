@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:orientation="vertical">
+ <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#009fe5"
+        android:orientation="horizontal"
+        android:padding="7dp" >
+		
+           <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Questionário SESI"
+            android:textColor="#ffffff"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+	</LinearLayout>
+    
+   
+       
+        
+   
+     <WebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+	      
+   </LinearLayout>

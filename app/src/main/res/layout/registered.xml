@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    	xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/scrollregesistered"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+   		 android:background="@drawable/android"     
+         >
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    
+    <TextView
+            android:layout_width="wrap_content"
+            android:textColor="#000000"
+            android:layout_height="wrap_content"
+            android:text="INFORMAÇÕES DE CADASTRO"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginTop="180dp"
+            android:id="@+id/textView2"
+            />
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Parabéns! Você foi Registrado com sucesso..."
+            android:textColor="#000000"
+            android:id="@+id/textView" 
+            android:layout_gravity="center"
+            android:textSize="15dp"
+            android:layout_marginTop="10dp"/>
+    
+<LinearLayout
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+     
+     android:background="#80ffffff" >
+    
+     <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/fname"
+            android:textColor="#000000"
+            android:layout_gravity="center"
+            android:textSize="15sp"
+            android:textAllCaps="true"
+         android:layout_marginLeft="7dp"/>
+    
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/lname"
+            android:textColor="#000000"
+            android:layout_gravity="center"
+            android:textSize="15sp"
+            android:textAllCaps="true"
+        android:layout_marginLeft="7dp"/>
+   
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/email"
+            android:textColor="#000000"
+            android:layout_gravity="center"
+            android:textSize="15sp"
+            android:textAllCaps="true"
+        android:layout_marginLeft="7dp"/>
+
+    
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/uname"
+            android:textColor="#000000"
+            android:layout_gravity="center"
+            android:textSize="15sp"
+            android:textAllCaps="true"
+        android:layout_marginLeft="7dp"/>
+
+    
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/regat"
+            android:textColor="#000000"
+            android:layout_gravity="center"
+            android:textSize="15sp"
+            android:textAllCaps="true"
+        android:layout_marginLeft="7dp"/>
+</LinearLayout>
+    <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Voltar ao Login"
+            android:id="@+id/login"
+            android:layout_gravity="center"
+            android:textColor="@drawable/button_cor"
+            android:background="#94d696"
+            android:layout_marginTop="10dp"
+            android:textSize="13dp"
+            />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ib"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/cozinha"
+        android:layout_marginTop="10dp"/>
+
+</LinearLayout>
+</ScrollView>

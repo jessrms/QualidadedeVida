@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_qualidadedevida" default="compile.module.qualidadedevida">
+  <dirname property="module.qualidadedevida.basedir" file="${ant.file.module_qualidadedevida}"/>
+  
+  <property name="module.jdk.home.qualidadedevida" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.qualidadedevida" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.qualidadedevida" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.qualidadedevida" value="-encoding UTF-8 -source 1.7 ${compiler.args}"/>
+  
+  <property name="qualidadedevida.output.dir" value="${module.qualidadedevida.basedir}/build/classes/main"/>
+  <property name="qualidadedevida.testoutput.dir" value="${module.qualidadedevida.basedir}/build/classes/test"/>
+  
+  <path id="qualidadedevida.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="qualidadedevida.module.production.classpath">
+    <path refid="${module.jdk.classpath.qualidadedevida}"/>
+  </path>
+  
+  <path id="qualidadedevida.runtime.production.module.classpath">
+    <pathelement location="${qualidadedevida.output.dir}"/>
+  </path>
+  
+  <path id="qualidadedevida.module.classpath">
+    <path refid="${module.jdk.classpath.qualidadedevida}"/>
+    <pathelement location="${qualidadedevida.output.dir}"/>
+  </path>
+  
+  <path id="qualidadedevida.runtime.module.classpath">
+    <pathelement location="${qualidadedevida.testoutput.dir}"/>
+    <pathelement location="${qualidadedevida.output.dir}"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.qualidadedevida">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.qualidadedevida">
+    <patternset refid="excluded.from.module.qualidadedevida"/>
+  </patternset>
+  
+  
+  <target name="compile.module.qualidadedevida" depends="compile.module.qualidadedevida.production,compile.module.qualidadedevida.tests" description="Compile module QualidadedeVida"/>
+  
+  <target name="compile.module.qualidadedevida.production" depends="register.custom.compilers" description="Compile module QualidadedeVida; production classes"/>
+  
+  <target name="compile.module.qualidadedevida.tests" depends="register.custom.compilers,compile.module.qualidadedevida.production" description="compile module QualidadedeVida; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.qualidadedevida" description="cleanup module">
+    <delete dir="${qualidadedevida.output.dir}"/>
+    <delete dir="${qualidadedevida.testoutput.dir}"/>
+  </target>
+</project>
