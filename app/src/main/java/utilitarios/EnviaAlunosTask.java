@@ -56,8 +56,8 @@ public class EnviaAlunosTask extends AsyncTask<Object, Object, String>{
                 //ListaAlunosActivity enbled=new ListaAlunosActivity();
                 //enbled.enableRegister(true);
 				//Toast.makeText(context, result, Toast.LENGTH_LONG).show();
-				 Toast.makeText(context,
-                         "Salvo com Sucesso!", Toast.LENGTH_SHORT).show();
+				// Toast.makeText(context,
+                  //       "Salvo com Sucesso!", Toast.LENGTH_SHORT).show();
 				
 
 		}

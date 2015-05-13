@@ -22,6 +22,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -32,6 +33,7 @@ import dao.AlunoDAO;
 import helper.FormularioHelper;
 import utilitarios.JSONfunctions;
 import utilitarios.Mascaras;
+import utilitarios.ValidaCPF;
 
 public class FormularioActivity extends Activity {
     JSONObject jsonobject;
@@ -65,10 +67,15 @@ public class FormularioActivity extends Activity {
         setContentView(R.layout.formulario);
         helper=new FormularioHelper(this);
         botao=(Button)findViewById(R.id.sbSalvar);
+        nit=(EditText)findViewById(R.id.edNit);
+        nit.addTextChangedListener(Mascaras.insert("###.###.###-##", nit));
+
         edaltura=(EditText)findViewById(R.id.edaltura);
         edaltura.addTextChangedListener(Mascaras.insert("#.##", edaltura));
+
         edpeso=(EditText)findViewById(R.id.edpeso);
         edpeso.addTextChangedListener(Mascaras.insert("###", edpeso));
+
         datanascimento=(EditText)findViewById(R.id.ednascimento);
         datanascimento.addTextChangedListener(Mascaras.insert("##/##/####",	 datanascimento));
         imc=(EditText)findViewById(R.id.edimc);
@@ -131,14 +138,14 @@ public class FormularioActivity extends Activity {
             public void onItemSelected(AdapterView<?> parent, View view,
                                        int posicao, long id) {
                 //editext do nit
-                nit=(EditText)findViewById(R.id.edNit);
+            /*    nit=(EditText)findViewById(R.id.edNit);
                 if(posicao > 0){
                     //se for maior que zero(sem empresa) habilita o editext para preenchimento
                     nit.setEnabled(true);
                 }else{
                     //se for igual a zero(sem empresa) deixa o editext bloqueado
                     nit.setEnabled(false);
-                }
+                }*/
                    int nome = parent.getPositionForView(view);
                    Log.i(TAG,"valor da posicao: "+nome);
 
@@ -193,8 +200,9 @@ public class FormularioActivity extends Activity {
      //salva as informacoes no banco
         botao.setOnClickListener(new OnClickListener(){
             @Override
-            public void onClick(View view){
-
+            public void onClick(View view) {
+                String CPF=nit.getText().toString();
+                if (ValidaCPF.isCPF(CPF) == true) {
                     Calculo();
                     Aluno aluno = helper.getAluno();
 
@@ -215,6 +223,9 @@ public class FormularioActivity extends Activity {
                     editor.commit();
                     finish();
 
+                }else{
+                    Toast.makeText(getApplicationContext(),"CPF Inválido !!",Toast.LENGTH_LONG).show();
+                }
             }
         });
     }

@@ -122,8 +122,9 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:ems="10"
-            android:hint="Nit ou Matricula"
+            android:hint="CPF"
             android:layout_marginTop="10dp"
+            android:inputType="number"
             android:background="@drawable/styles_edit_text"
              />
         
